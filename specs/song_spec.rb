@@ -12,4 +12,8 @@ class SongTest < Minitest::Test
     assert_equal("Yes", @song.artist())
   end
 
+  def test_song_title
+    assert_equal("Roundabout", @song.title())
+  end
+
 end
