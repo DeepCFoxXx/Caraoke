@@ -11,7 +11,10 @@ class RoomTest < Minitest::Test
     @song2 = Song.new("Ozzy", "Bark at the moon")
     @song3 = Song.new("Thunder", "Love walked in")
     @song4 = Song.new("Boston", "More than a feeling")
+    @song5 = Song.new("ACDC", "Back in black")
+    @song6 = Song.new("Aerosmith", "Walk this way")
     @songs1 = [@song1, @song2, @song3]
+    @songs2 = [@song5, @song6]
     @room = Room.new("Room 808", @songs1)
     @guest1 = Guest.new("Han")
     @guest2 = Guest.new("Liea")
@@ -46,6 +49,11 @@ class RoomTest < Minitest::Test
   def test_add_song
     @room.add_song(@song4)
     assert_equal(4, @room.number_of_songs())
+  end
+
+  def test_add_many_songs
+    @room.add_many_songs(@songs2)
+    assert_equal(5, @room.number_of_songs())
   end
 
 end
