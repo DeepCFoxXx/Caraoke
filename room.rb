@@ -20,4 +20,8 @@ class Room
     @guests.push(guest)
   end
 
+  def check_in_many_guests(guests)
+    guests.each {|guest| check_in_guest(guest)}
+  end
+
 end
