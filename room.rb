@@ -24,4 +24,8 @@ class Room
     guests.each {|guest| check_in_guest(guest)}
   end
 
+  def check_out_guests
+    @guests = []
+  end
+
 end
