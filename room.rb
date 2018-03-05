@@ -8,4 +8,16 @@ class Room
     @guests = []
   end
 
+  def number_of_guests
+    return @guests.length()
+  end
+
+  def number_of_songs
+    return @songs.length()
+  end
+
+  def check_in_guest
+    @guests.push(guest)
+  end
+
 end

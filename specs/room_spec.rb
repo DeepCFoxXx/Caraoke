@@ -23,4 +23,8 @@ class RoomTest < Minitest::Test
     assert_equal("Room 808", @room.name())
   end
 
+  def test_room_songs
+    assert_equal(3, @room.number_of_songs())
+  end
+
 end
