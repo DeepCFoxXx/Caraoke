@@ -16,7 +16,7 @@ class Room
     return @songs.length()
   end
 
-  def check_in_guest
+  def check_in_guest(guest)
     @guests.push(guest)
   end
 
