@@ -28,4 +28,12 @@ class Room
     @guests = []
   end
 
+  def add_song(song)
+    @songs.push(song)
+  end
+
+  def add_many_songs(songs)
+    songs.each{|song| add_song(song)}
+  end
+
 end
